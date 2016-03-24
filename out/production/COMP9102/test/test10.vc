@@ -1,0 +1,24 @@
+boolean b[] = {false, false, false, false, false, false, false, true};
+
+int loop(boolean c, int i) {
+	while(c) {
+		if(b[i]) {
+			break;
+		}
+		i = i + 1;
+		continue;
+		putString("this should not be seen");
+	}
+	return i;
+}
+
+int breaker(){
+	boolean c = true;
+	int i = 0;
+	return loop(c, i);
+}
+
+int main() {  
+	putIntLn(breaker());
+  	return 0;
+}

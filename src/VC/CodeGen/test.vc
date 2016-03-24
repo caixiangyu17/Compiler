@@ -1,0 +1,4 @@
+int main() {
+	boolean d[] = {true, false, true, true};
+	 return 0;
+}
