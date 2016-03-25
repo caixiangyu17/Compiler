@@ -1,0 +1,71 @@
+boolean b[] = {false, false, false, false, false, false, false, true};
+float f[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int j[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+int loop(boolean c, int i) {
+	int a = 0;
+	float d = 10;
+	float temp = 0;
+	float temp1 = 0;
+	float temp2 = 0;
+	while(!c) {
+		if(b[i]) {
+			break;
+		}
+		i = i + 1;
+		continue;
+		putString("this should not be seen");
+	}
+	while(c) {
+	putString("this should not be seen");
+		if(b[i]) {
+			break;
+		}
+		i = i + 1;
+		continue;
+		
+	}
+	for(a = 0; a < d; a = a + 1) {
+		putFloat(-f[a]);
+		putString(" ");
+	}
+	putStringLn(" ");
+	for(a = 0; a < d; a = a + 1) {
+		putInt(-j[a]);
+		putString(" ");
+	}
+	putStringLn(" ");
+	
+	putStringLn("Binary test");
+	for(a = 0; a < d; a = a + 1) {
+		temp = (f[a] + (-j[a]) * f[a]) * f[a] + -j[a] / f[a];
+		putFloat(temp);
+		putString(" ");
+	}
+	putStringLn(" ");
+	
+	putStringLn("Multi assign test");
+	for(a = 0; a < d; a = a + 1) {
+		temp = temp1 = temp2 = f[a] = f[a] + (-j[a]) * f[a];
+		putFloat(temp);
+		putString(" ");
+	}
+	putStringLn(" ");
+	
+	
+	return i;
+}
+
+int breaker(){
+	boolean c = false;
+	int i = 0;
+	return loop(c, i);
+}
+
+int main() {  
+
+	putIntLn(breaker());
+	
+  	return 0;
+}

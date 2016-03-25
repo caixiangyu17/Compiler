@@ -1,0 +1,16 @@
+int a[3];
+boolean f() {
+    putBool(false);
+    return false;
+}
+int main() {
+    int b[3];
+    int i = 1;
+    int j = 1;
+    b[i+j] = a[0] + j;
+    putBoolLn(b[2] == 1);
+    a[0] = a[1] = a[2] = b[2]; 
+    putBoolLn(a[0] == a[1] && a[1] == a[2] && a[2] == b[2]);
+    false && f();
+    return 0;
+}

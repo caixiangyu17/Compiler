@@ -1,0 +1,18 @@
+boolean b[] = {false, false, false, false, false, false, false, true};
+
+int breaker(){
+	int i = 0;
+	for(i = 0; i < 100; i = i + 1) {
+		if(b[i]) {
+			break;
+		} else {
+			continue;
+		}
+	}
+	return i;
+}
+
+int main() {  
+	putIntLn(breaker());
+  	return 0;
+}

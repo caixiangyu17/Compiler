@@ -1,0 +1,16 @@
+float a[] = {1, 2, 3};
+
+float func(float f[]) {
+	return f[1];
+}
+
+int main() {
+	float b = 1;
+	
+	func(a);
+	
+	b = func(a);
+	
+
+    return 0;
+}

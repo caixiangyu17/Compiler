@@ -1,0 +1,11 @@
+float a[] = {1, 2, 3};
+int c[] = {1, 2, 3, 4};
+
+int main() {
+	int b = 4;
+	
+	boolean d[] = {true, false, true, true};
+	a[1] = b;
+
+    return 0;
+}

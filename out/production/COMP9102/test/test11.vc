@@ -1,0 +1,42 @@
+boolean b[] = {false, false, false, false, false, false, false, true};
+float f[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int j[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+int loop(boolean c, int i) {
+	int a = 0;
+	float d = 10;
+	while(c) {
+		if(b[i]) {
+			break;
+		}
+		i = i + 1;
+		continue;
+		putString("this should not be seen");
+	}
+	for(a = 0; a < d; a = a + 1) {
+		putFloat(f[a]);
+		putString(" ");
+	}
+	putStringLn(" ");
+	for(a = 0; a < d; a = a + 1) {
+		putInt(j[a]);
+		putString(" ");
+	}
+	putStringLn(" ");
+	
+	return i;
+}
+
+int breaker(){
+	boolean c = true;
+	int i = 0;
+	return loop(c, i);
+}
+
+int main() {  
+
+	putIntLn(breaker());
+	
+  	return 0;
+}
